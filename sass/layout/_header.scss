@@ -1,0 +1,31 @@
+.header {
+  height: 95vh;
+  border-radius: 1rem 1rem 0 0;
+  background-image: linear-gradient(
+      to right bottom,
+      rgba($color-primary-light, 0.8),
+      rgba($color-primary-dark, 0.8)
+    ),
+    url("../../assets/pickle-cover-image.jpg");
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+  position: relative;
+
+  .header__logo {
+    .header__logo--img {
+      width: 2rem;
+      display: block;
+      position: absolute;
+      left: 2rem;
+      top: 2rem;
+
+      &:hover {
+        cursor: pointer;
+        animation-name: shakeSideWays;
+        animation-duration: 0.2s;
+        animation-iteration-count: 2;
+      }
+    }
+  }
+}

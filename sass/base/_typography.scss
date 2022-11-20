@@ -1,0 +1,42 @@
+body {
+  font-family: "Montserrat", sans-serif;
+  background-color: $color-grey;
+  font-weight: 400;
+  font-size: 1.6rem;
+  /* line-height: 1.7; */
+  color: $color-black;
+  padding: 3rem;
+}
+
+// if you wish 'hero' can also be considered as a component
+.hero {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-align: center;
+
+  .hero__heading {
+    backface-visibility: hidden;
+
+    .hero__heading--title {
+      font-size: 5rem;
+      font-weight: 700;
+      font-family: "Great Vibes", cursive;
+      display: block; // if not set, animation doesn't work properly
+      animation: moveInTop 1s ease-out;
+      text-shadow: 0 0 2px $color-black;
+    }
+
+    .hero__heading--tag {
+      font-size: 1.25rem;
+      display: block;
+      text-transform: uppercase;
+      letter-spacing: 0.05rem;
+      color: $color-grey;
+      text-shadow: 0 0 2px $color-black;
+      animation: easeIn 0.5s ease-out 0.75s;
+      animation-fill-mode: backwards; // fixes animation
+    }
+  }
+}
